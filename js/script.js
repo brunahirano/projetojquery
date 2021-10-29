@@ -1,3 +1,4 @@
+//função usada para o botão de dark mode
 $('#noite').click(function () {
     $('#noite').css('visibility', 'hidden');
     $('#dia').css('visibility', 'visible');
@@ -18,12 +19,14 @@ $('#noite').click(function () {
         'backgroundColor': 'white',
         'color': '#333333',
     })
+
+    //Atribuindo o caminho para as imagens de t+ e t-, acessibilidade de aumentar e diminuir imagem
     let imagem = document.getElementById('aumentar3');
     imagem.src = 'img/t_branco.png'
     let imagem2 = document.getElementById('diminuir3');
     imagem2.src = 'img/t-_branco-menor.png'
 
-
+    //Estilização dinânica de cores para tags em questão
     $('tbody').css({
         color: 'white',
     })
@@ -33,6 +36,7 @@ $('#noite').click(function () {
         'color': 'white'
     })
 
+    //hover do menu de navegação principal
     $(function () {
         $(".nav-a").hover(
             function () { $(this).css("color", "white") },
@@ -40,6 +44,7 @@ $('#noite').click(function () {
         );
     });
 
+    //hover para imagem da bandeira do brasil para troca de lingua- Brasil representando português
     $(function () {
         $("#brasil2").hover(
             function () { $(this).css("boxShadow", "0px 0px 10px 2px black") },
@@ -47,20 +52,21 @@ $('#noite').click(function () {
         );
     });
 
+    //hover do botão de troca de lingua estados unidos2-  representando inglês
     $(function () {
         $("#estadosunidos2").hover(
             function () { $(this).css("boxShadow", "0px 0px 10px 2px black") },
             function () { $(this).css("boxShadow", "0px 0px 0px 0px") }
         );
     });
-
+    //hover do botão de troca de lingua espanha2-  representando espanhol
     $(function () {
         $("#espanha2").hover(
             function () { $(this).css("boxShadow", "0px 0px 10px 2px black") },
             function () { $(this).css("boxShadow", "0px 0px 0px 0px") }
         );
     });
-
+    //hover do botão de troca de bandeira frança-  representando francês
     $(function () {
         $("#franca2").hover(
             function () { $(this).css("boxShadow", "0px 0px 10px 2px black") },
@@ -69,6 +75,7 @@ $('#noite').click(function () {
     });
 })
 
+//Função ao clicar na imagem de lua branca, representenado as cores iniciais site
 $('#dia').click(function () {
     $('#dia').css('visibility', 'hidden');
     $('#noite').css('visibility', 'visible');
@@ -98,18 +105,20 @@ $('#dia').click(function () {
     })
     $('#calculadora-footer, #formulario-footer, #cadastro-footer').css('color', 'rgb(248, 234, 234')
 
+    //Atribuir a imagem t+ e t- para acessibilidade de aumentar e diminuir letras
     let imagem = document.getElementById('aumentar3');
     imagem.src = 'img/aumentar.png'
     let imagem2 = document.getElementById('diminuir3');
     imagem2.src = 'img/diminuir.png'
 
+    //hover no menu de navegação principal
     $(function () {
         $(".nav-a").hover(
             function () { $(this).css("color", "rgb(252 134 14)") },
             function () { $(this).css("color", "#333333") }
         );
     });
-
+    //hover no ao clicar na imagem com a badeira do Brasil
     $(function () {
         $("#brasil2").hover(
             function () { $(this).css("boxShadow", "0px 0px 10px 2px rgb(252, 134, 14)") },
@@ -117,6 +126,7 @@ $('#dia').click(function () {
         );
     });
 
+    //hover no ao clicar na imagem com a badeira dos EUA
     $(function () {
         $("#estadosunidos2").hover(
             function () { $(this).css("boxShadow", "0px 0px 10px 2px rgb(252, 134, 14)") },
@@ -124,6 +134,7 @@ $('#dia').click(function () {
         );
     });
 
+    //hover no ao clicar na imagem com a bandeira da espanha
     $(function () {
         $("#espanha2").hover(
             function () { $(this).css("boxShadow", "0px 0px 10px 2px rgb(252, 134, 14)") },
@@ -131,6 +142,7 @@ $('#dia').click(function () {
         );
     });
 
+    //hover no ao clicar na imagem com a badeira da frança
     $(function () {
         $("#franca2").hover(
             function () { $(this).css("boxShadow", "0px 0px 10px 2px rgb(252, 134, 14)") },
@@ -139,6 +151,7 @@ $('#dia').click(function () {
     });
 })
 
+//Abaixo são as condições para o container de linguas, ao clicar em uma bandeira as demais desaparecem.
 $('.containerlingua').hide()
 
 let brasil = document.getElementById('brasil')
@@ -152,16 +165,13 @@ let espanha2 = document.getElementById('espanha2')
 let franca2 = document.getElementById('franca2')
 
 
-
 brasil.addEventListener('click', brasilanime)
-
 
 function brasilanime() {
     $('.containerlingua').fadeIn('2000')
 }
 
 brasil2.addEventListener('click', brasilanime2)
-
 
 function brasilanime2() {
     $('#estadosunidos').css('visibility', 'hidden')
@@ -173,6 +183,7 @@ function brasilanime2() {
     $('#formulario').text("FORMULÁRIO")
     $('#cadastro').text("CADASTRO")
 
+    //Conteúdo de texto do site em português
     $('#quemsomos').text("Somos uma agência de soluções digitais. Com uma equipe eficiente, formada por jovens desenvolvedores, criamos e solucionamos quesitos para melhor atender a sua empresa. Buscando pelo cumprimento de prazos e resultados satisfatórios.")
 
     $('#conheca-nossa-equipe').text("Conheça a nossa equipe")
@@ -226,6 +237,7 @@ function brasilanime2() {
 
 }
 
+ //Conteúdo de texto do site em francês
 franca.addEventListener('click', francaanime)
 function francaanime() {
     $('.containerlingua').fadeIn('2000')
@@ -293,7 +305,7 @@ function francaanime2() {
 
     $('.containerlingua').fadeOut('2000')
 }
-
+ //Conteúdo de texto do site em inglês
 estadosunidos.addEventListener('click', estadosunidosanime)
 function estadosunidosanime() {
     $('.containerlingua').fadeIn('2000')
@@ -363,6 +375,7 @@ function estadosunidosanime2() {
     $('.containerlingua').fadeOut('2000')
 }
 
+ //Conteúdo de texto do site em espanhol
 espanha.addEventListener('click', espanhaanime)
 function espanhaanime() {
     $('.containerlingua').fadeIn('2000')
@@ -430,11 +443,7 @@ function espanhaanime2() {
     $('.containerlingua').fadeOut('2000')
 }
 
-
-
-
-
-
+//função para aumentar e diminuir o texto no menu do site web, onde limitamos o aumentar em 160% para que o  texto não ficasse sobreposto a outros elementos do site, como imagens e logo da empresa, ao atingir o limite o botão t+ desaparece e fica somente a opção de diminuir
 var elementBody = document.querySelector('*');
 var elementBtnIncreaseFont = document.getElementById('aumentar');
 var elementBtnDecreaseFont = document.getElementById('diminuir');
@@ -467,7 +476,7 @@ elementBtnDecreaseFont.addEventListener('click', function (event) {
     }
 });
 
-
+//função para aumentar e diminuir o texto para site responsivo, onde limitamos o aumentar em 160% para que o  texto não ficasse sobreposto a outros elementos do site, como imagens e logo da empresa, ao atingir o limite o botão t+ desaparece e fica somente a opção de diminuir
 var elementBtnIncreaseFont2 = document.getElementById('aumentar3');
 var elementBtnDecreaseFont2 = document.getElementById('diminuir3');
 // Padrão de tamanho, equivale a 100% do valor definido no Body
@@ -499,10 +508,11 @@ elementBtnDecreaseFont2.addEventListener('click', function (event) {
     }
 });
 
-
-
+//configuração do menu mobile, uma NavBar hamburguer
+//menu começa hide
 $('.aparecer').hide();
 
+//ao clicar pela primeira vez, ele mostra o menu, com uso de slideDown r transform rotate da imagem de seta
 let up = 0;
 $('#ferramenta-aside').click(function () {
     if(up == 0) {
@@ -521,6 +531,7 @@ $('#ferramenta-aside').click(function () {
     
 })
 
+//ao clicar com o meu abert, o menu desaparece, com uso de Fadein, uso de animatins e overflow
 $('.desaparecer-aside').hide()
 $('#menu-aside').click(function(){
     
@@ -534,9 +545,6 @@ $('#menu-aside').click(function(){
     $('#menu-aside').hide()
     $('.desaparecer-aside').fadeIn(2000)
 })
-
-
-
 
 $('.desaparecer-aside').click(function(){
     $('.container-aside').css({
