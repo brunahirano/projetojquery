@@ -56,3 +56,7 @@ A. Criar uma classe com 3 atributos e os métodos necessários para ler os campo
 
 
 Obs.: não se esqueçam de inserirem o vLibras nas páginas - é obrigatório!!!!
+
+
+## Para ver o projeto ao vivo, [clique aqui](https://grupo9-soulcode-jquery.github.io/projetojquery/)
+![enter image description here](https://github.com/grupo9-soulcode-jquery/projetojquery/blob/main/assets/creativeidea.png)
